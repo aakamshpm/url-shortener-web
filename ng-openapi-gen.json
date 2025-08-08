@@ -1,0 +1,8 @@
+{
+  "input": "api-json.json",
+  "output": "src/app/services/api",
+  "ignoreUnusedModels": false,
+  "serviceSuffix": "Api",
+  "enumStyle": "enum",
+  "removeStaleFiles": true
+}
