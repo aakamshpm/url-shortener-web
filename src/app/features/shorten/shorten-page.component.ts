@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { CreateUrlDto, UrlResponseDto } from '../../services/api/models';
 import { UrlsApi } from '../../services/api/services';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-shorten-page',
@@ -31,10 +32,10 @@ export class ShortenPageComponent {
 
     try {
       const body: CreateUrlDto = { originalUrl: this.url.trim() };
-      const response = await this.api
-        .urlControllerCreateShortUrl({ body })
-        .toPromise();
-      this.result = response || null;
+      const response: any = await firstValueFrom(
+        this.api.urlControllerCreateShortUrl({ body })
+      );
+      this.result = response.data || null;
     } catch (err: any) {
       console.error('API Error:', err);
       this.error = err?.error?.message || 'Failed to shorten URL.';
