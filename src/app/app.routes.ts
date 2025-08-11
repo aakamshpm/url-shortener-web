@@ -15,11 +15,4 @@ export const routes: Routes = [
         (m) => m.AnalyticsPageComponent
       ),
   },
-  {
-    path: 'details/:shortCode',
-    loadComponent: () =>
-      import('./features/details/details-page.component').then(
-        (m) => m.DetailsPageComponent
-      ),
-  },
 ];
