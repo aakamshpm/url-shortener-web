@@ -20,23 +20,6 @@ import { CommonModule } from '@angular/common';
                 >aakamshpm</a
               >
             </p>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-500 hover:text-gray-900 transition-colors"
-                >Privacy</a
-              >
-              <a
-                href="#"
-                class="text-gray-500 hover:text-gray-900 transition-colors"
-                >Terms</a
-              >
-              <a
-                href="#"
-                class="text-gray-500 hover:text-gray-900 transition-colors"
-                >Contact</a
-              >
-            </div>
           </div>
         </div>
       </div>
