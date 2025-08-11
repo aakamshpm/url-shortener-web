@@ -9,6 +9,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'analytics',
+    loadComponent: () =>
+      import('./features/analytics/analytics-page.component').then(
+        (m) => m.AnalyticsPageComponent
+      ),
+  },
+  {
     path: 'details/:shortCode',
     loadComponent: () =>
       import('./features/details/details-page.component').then(
