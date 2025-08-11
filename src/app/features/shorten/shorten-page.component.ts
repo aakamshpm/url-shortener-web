@@ -16,6 +16,9 @@ export class ShortenPageComponent {
   result: UrlResponseDto | null = null;
   error: string | null = null;
   loading = false;
+  showToast = false;
+  toastMessage = '';
+  private toastTimeout: any;
   private api = inject(UrlsApi);
 
   async shorten(ev: Event) {
@@ -47,8 +50,14 @@ export class ShortenPageComponent {
   async copyToClipboard(text: string) {
     try {
       await navigator.clipboard.writeText(text);
-      // You could add a toast notification here
-      console.log('URL copied to clipboard');
+      this.toastMessage = 'Short URL copied to clipboard!';
+      this.showToast = true;
+      if (this.toastTimeout) {
+        clearTimeout(this.toastTimeout);
+      }
+      this.toastTimeout = setTimeout(() => {
+        this.showToast = false;
+      }, 2000);
     } catch (err) {
       console.error('Failed to copy URL', err);
     }
