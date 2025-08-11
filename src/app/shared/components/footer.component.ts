@@ -14,7 +14,12 @@ import { CommonModule } from '@angular/common';
             <p>&copy; {{ currentYear }} Zip Link. All rights reserved.</p>
           </div>
           <div class="flex items-center space-x-6 text-sm">
-            <p class="text-gray-500">Made with ❤️ by aakamshpm</p>
+            <p class="text-gray-500">
+              Made with ❤️ by
+              <a target="_blank" href="https://github.com/aakamshpm"
+                >aakamshpm</a
+              >
+            </p>
             <div class="flex space-x-4">
               <a
                 href="#"

@@ -14,33 +14,30 @@
     <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
       <form (ngSubmit)="getStats($event)" class="space-y-6">
         <div class="space-y-2">
-          <label
-            for="shortCode"
-            class="block text-sm font-medium text-gray-700"
-          >
-            Short code
+          <label for="shortUrl" class="block text-sm font-medium text-gray-700">
+            Short URL
           </label>
           <div class="relative">
             <input
               type="text"
-              id="shortCode"
-              [(ngModel)]="shortCode"
-              name="shortCode"
+              id="shortUrl"
+              [(ngModel)]="shortUrl"
+              name="shortUrl"
               required
-              placeholder="e.g., 4cFk"
+              placeholder="e.g., http://localhost:3000/4cFk"
               class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent placeholder-gray-400 text-gray-900 font-light transition duration-200"
               [disabled]="loading"
             />
           </div>
           <p class="text-xs text-gray-500 font-light">
-            Enter the code from your shortened URL (e.g., if URL is
-            localhost:3000/4cFk, enter "4cFk")
+            Paste your full short URL (e.g., http://localhost:3000/4cFk or
+            https://zip.link/xyz123)
           </p>
         </div>
 
         <button
           type="submit"
-          [disabled]="loading || !shortCode.trim()"
+          [disabled]="loading || !shortUrl.trim()"
           class="w-full bg-gray-900 text-white py-4 px-6 rounded-xl hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition duration-200 disabled:opacity-50 disabled:cursor-not-allowed font-medium"
         >
           <span *ngIf="loading" class="flex items-center justify-center">
