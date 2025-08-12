@@ -1,59 +1,72 @@
-# UrlShortenerWeb
+# ZipLink Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+This is the frontend UI for [ZipLink](https://github.com/aakamshpm/ziplink), a scalable URL shortener service.  
+The primary purpose of this frontend is to **showcase the backend system design and API** built in the companion repository, as well as to serve as a learning project for Angular.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎯 Project Purpose
 
-```bash
-ng serve
-```
+- **Demonstrate the ZipLink Backend:**  
+  This UI connects to and showcases the scalable backend and API design available in the [ZipLink backend repository](https://github.com/aakamshpm/ziplink).
+- **Showcase Angular Skills:**  
+  The frontend is built with [Angular](https://angular.io/). It's my first major Angular project, created to help me learn and demonstrate modern Angular practices, component design, forms, state management, and API integration.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## ⚡ Features
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Submit any long URL to generate a short ZipLink
+- See a list of your recently shortened links (session-based)
+- Copy short URLs to clipboard with one click
+- View analytics for a short URL (if supported by backend)
+- Responsive, clean UI using Angular Material
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🚀 Getting Started
 
-```bash
-ng generate --help
-```
+1. **Clone the repo**
 
-## Building
+   ```bash
+   git clone https://github.com/aakamshpm/ziplink-web.git
+   cd ziplink-web
+   ```
 
-To build the project run:
+2. **Install dependencies**
 
-```bash
-ng build
-```
+   ```bash
+   npm install
+   ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+3. **Set API Endpoint**
 
-## Running unit tests
+   - By default, the app points to `http://localhost:3000` for the backend API.
+   - To use a different backend, update the `environment.ts` file.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. **Run the app**
+   ```bash
+   ng serve
+   ```
+   Visit [http://localhost:4200](http://localhost:4200) in your browser.
 
-```bash
-ng test
-```
+---
 
-## Running end-to-end tests
+## 🔗 Related Repositories
 
-For end-to-end (e2e) testing, run:
+- [ZipLink Backend (NestJS)](https://github.com/aakamshpm/ziplink)
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 📝 License
 
-## Additional Resources
+MIT
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 🙋‍♂️ About
+
+This frontend was created to demonstrate both a scalable backend system and my commitment to learning and mastering Angular.  
+Feedback and contributions are welcome!
+
+Built with ❤️ by [@aakamshpm](https://github.com/aakamshpm)
