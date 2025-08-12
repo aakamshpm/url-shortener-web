@@ -15,26 +15,26 @@ import { CommonModule } from '@angular/common';
             </h1>
           </div>
 
-          <div class="flex space-x-8">
+          <div class="flex space-x-6 sm:space-x-8">
             <a
               routerLink="/"
               routerLinkActive="text-gray-900 font-medium border-b-2 border-gray-900 pb-1"
               [routerLinkActiveOptions]="{ exact: true }"
-              class="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+              class="text-xs sm:text-base text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
               Shorten
             </a>
             <a
               routerLink="/analytics"
               routerLinkActive="text-gray-900 font-medium border-b-2 border-gray-900 pb-1"
-              class="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+              class="text-xs sm:text-base text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
               Analytics
             </a>
             <a
               routerLink="/docs"
               routerLinkActive="text-gray-900 font-medium border-b-2 border-gray-900 pb-1"
-              class="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+              class="text-xs sm:text-base text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
             >
               Docs
             </a>
