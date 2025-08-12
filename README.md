@@ -17,9 +17,8 @@ The primary purpose of this frontend is to **showcase the backend system design 
 ## ⚡ Features
 
 - Submit any long URL to generate a short ZipLink
-- See a list of your recently shortened links (session-based)
 - Copy short URLs to clipboard with one click
-- View analytics for a short URL (if supported by backend)
+- View analytics for a short URL
 - Responsive, clean UI using Angular Material
 
 ---
