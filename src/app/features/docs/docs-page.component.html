@@ -1,0 +1,157 @@
+<div class="min-h-full bg-gray-50 py-16 px-4">
+  <div class="max-w-4xl mx-auto">
+    <!-- Header Section -->
+    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8">
+      <h1
+        class="text-3xl sm:text-4xl font-light text-gray-900 mb-6 tracking-tight"
+      >
+        ZipLink: Not Just Another URL Shortener
+      </h1>
+
+      <div class="prose prose-gray max-w-none">
+        <p class="text-lg text-gray-600 font-light leading-relaxed mb-6">
+          When I started building ZipLink, my goal wasn't to add yet another
+          clone to the endless list of URL shorteners out there. Instead, I
+          wanted a playground—a real-world system that would push me to learn,
+          experiment, and truly understand what it takes to design backends that
+          don't just work, but scale.
+        </p>
+
+        <h2 class="text-xl font-medium text-gray-900 mb-4">
+          Why ZipLink isn't just a clone:
+        </h2>
+        <p class="text-gray-600 font-light leading-relaxed mb-6">
+          Most URL shorteners are simple: take a link, store it, generate a
+          code, redirect. ZipLink is fundamentally about reliability,
+          throughput, and growth. I focused on system design patterns used by
+          production teams, not just hobby projects.
+        </p>
+
+        <h2 class="text-xl font-medium text-gray-900 mb-4">
+          What I learned and built:
+        </h2>
+        <ul
+          class="list-disc list-inside space-y-3 text-gray-600 font-light mb-6"
+        >
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Batch-wise ID allocation:</strong
+            >
+            Instead of incrementing the DB for every new URL, ZipLink grabs a
+            batch of IDs at once. This minimizes DB writes and enables
+            horizontal scaling with no risk of duplicate codes, even when
+            multiple app instances are running.
+          </li>
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Cache-first architecture:</strong
+            >
+            Fast redirects are powered by Redis, keeping the DB cool and
+            response times low. Newly created and hot URLs are cached
+            automatically.
+          </li>
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Async analytics pipeline:</strong
+            >
+            Click events go to a Redis buffer and are flushed to the database in
+            batches by a scheduled job, reducing write pressure and smoothing
+            spikes.
+          </li>
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Rate limiting and validation:</strong
+            >
+            Both URL creation and redirects are rate-limited to guard against
+            abuse. Strict input checks and security headers are enforced
+            everywhere.
+          </li>
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Stateless and container-ready:</strong
+            >
+            Everything is Dockerized, making it easy to scale, deploy, and reset
+            environments.
+          </li>
+          <li>
+            <strong class="font-medium text-gray-900"
+              >Modern developer experience:</strong
+            >
+            TypeScript, NestJS, Prisma, and robust OpenAPI docs (Swagger) make
+            the codebase clean and extensible.
+          </li>
+        </ul>
+
+        <h2 class="text-xl font-medium text-gray-900 mb-4">
+          What this project says about me and my skills:
+        </h2>
+        <ul
+          class="list-disc list-inside space-y-3 text-gray-600 font-light mb-6"
+        >
+          <li>
+            I'm not afraid to go deeper than the tutorial layer. I dig into
+            trade-offs, edge cases, and production-like challenges.
+          </li>
+          <li>
+            I care about performance, reliability, and security, not just
+            features.
+          </li>
+          <li>
+            I can design, build, and document scalable cloud-ready systems using
+            modern stacks.
+          </li>
+          <li>
+            I'm comfortable with both the high-level architecture and the
+            nitty-gritty of database, caching, and deployment.
+          </li>
+          <li>
+            I value readable code, automation, and a developer-friendly
+            experience for myself and others.
+          </li>
+        </ul>
+
+        <h2 class="text-xl font-medium text-gray-900 mb-4">In short:</h2>
+        <p class="text-gray-600 font-light leading-relaxed mb-6">
+          ZipLink was the best way for me to learn how real, scalable systems
+          are made—and to prove to myself (and future collaborators/employers)
+          that I can design and build them.
+        </p>
+
+        <p class="text-gray-500 text-sm font-light italic">— aakamshpm</p>
+      </div>
+    </div>
+
+    <!-- API Documentation Section -->
+    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+      <h2 class="text-2xl font-light text-gray-900 mb-6 tracking-tight">
+        API Documentation
+      </h2>
+
+      <p class="text-gray-600 font-light leading-relaxed mb-6">
+        Explore the complete API documentation with interactive examples and
+        detailed endpoint information.
+      </p>
+
+      <a
+        [href]="swaggerUrl"
+        target="_blank"
+        class="inline-flex items-center px-6 py-3 bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors duration-200 font-medium text-sm"
+      >
+        <svg
+          class="w-5 h-5 mr-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-1M6 10h8m0 0l-3-3m3 3l-3 3"
+          />
+        </svg>
+        View Swagger Documentation
+      </a>
+    </div>
+  </div>
+</div>

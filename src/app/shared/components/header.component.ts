@@ -31,6 +31,13 @@ import { CommonModule } from '@angular/common';
             >
               Analytics
             </a>
+            <a
+              routerLink="/docs"
+              routerLinkActive="text-gray-900 font-medium border-b-2 border-gray-900 pb-1"
+              class="text-gray-600 hover:text-gray-900 transition-colors duration-200 font-medium"
+            >
+              Docs
+            </a>
           </div>
         </nav>
       </div>

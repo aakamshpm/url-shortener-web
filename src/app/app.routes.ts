@@ -15,4 +15,11 @@ export const routes: Routes = [
         (m) => m.AnalyticsPageComponent
       ),
   },
+  {
+    path: 'docs',
+    loadComponent: () =>
+      import('./features/docs/docs-page.component').then(
+        (m) => m.DocsPageComponent
+      ),
+  },
 ];
